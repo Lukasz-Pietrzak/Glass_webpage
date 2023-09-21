@@ -1,0 +1,294 @@
+html {}
+
+body {
+	background: linear-gradient(to right, #00474d, #007f87, #00b5bf, #00e5ff);
+	height: 979px;
+	overflow: hidden;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+
+}
+
+#szescian {
+	position: absolute;
+	top: -20%;
+	left: 40%;
+	width: 16%;
+	animation: kostka 15s ease-in-out infinite;
+}
+
+@keyframes kostka {
+	to {
+		top: 90%;
+	}
+}
+
+#kolko {
+	position: absolute;
+	top: 0%;
+	left: 65%;
+	width: 35%;
+	animation: kolko 20s ease-in-out infinite;
+}
+
+@keyframes kolko {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+#container {
+	background: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.8) 0%, rgba(0.3, 0.4, 0.5, 0.4) 77%);
+	border-radius: 10px;
+	padding: 40px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 700px;
+}
+
+
+p {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 20px;
+	margin-bottom: 1em;
+}
+
+#top-text {
+	display: inline-block;
+}
+
+h1 {
+	font-size: 50px;
+	color: white;
+	text-align: justify;
+	margin-left: 190px;
+	font-family: 'Cormorant Garamond', serif;
+}
+
+#top-text > p {
+	color: white;
+	text-align: justify;
+	margin-left: 190px;
+}
+
+#top-text > p > span {
+	color: aqua;
+	position: relative;
+}
+
+#top-text > p > span:hover {
+	cursor: pointer;
+}
+
+#top-text > p > span::after {
+	content: "";
+	position: absolute;
+	border-radius: 200%;
+	top: 27px;
+	left: 0px;
+	background: linear-gradient(to left, rgba(47, 152, 161, 1) 0%, rgba(126, 203, 209, 0.8) 25%, rgba(186, 229, 233, 0.4) 50%, rgba(235, 247, 249, 0.2) 75%, rgba(235, 247, 249, 0) 100%);
+	width: 0%;
+	height: 3px;
+	display: block;
+	transition: all 0.4s ease-out;
+}
+
+
+#top-text > p > span:hover::after {
+	width: 100%;
+}
+
+#top-image {
+	float: left;
+	width: 150px;
+}
+
+#bottom-text {
+	margin-left: 130px;
+	position: relative;
+}
+
+#bottom-text-div > p {
+	color: white;
+	padding-left: 190px;
+}
+
+#bottom-text-div > p > span {
+	font-weight: bold;
+}
+
+
+
+#bottom-image1 {
+	float: left;
+	width: 140px;
+	position: absolute;
+	top: 0px;
+	left: -20%;
+}
+
+#bottom-image2 {
+	float: left;
+	width: 140px;
+	position: absolute;
+	top: 100px;
+	left: 4%;
+}
+
+#bottom-text-div {}
+
+#submit-main {
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	margin-left: 150px;
+}
+
+#submit {
+	color: white;
+	text-align: center;
+	font-size: 35px;
+	background: linear-gradient(to right, #00474d, #007f87, #00b5bf, #00e5ff);
+	width: 302px;
+	padding: 12px;
+	font-weight: bold;
+	position: relative;
+	overflow: hidden;
+}
+
+#submit {
+	cursor: pointer;
+}
+
+#submit::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: -70px;
+	background-color: #fff;
+	transform-origin: top left;
+	transform: skewX(-20deg);
+	width: 60px;
+	height: 100%;
+	opacity: 37%;
+	display: block;
+	transition: all 0.3s ease-out;
+}
+
+#submit:hover::before {
+	transform: translateX(450px);
+}
+
+
+@media screen and (max-width: 1000px) {
+	#container {
+		width: 600px;
+	}
+}
+
+@media screen and (max-width: 800px) {
+
+
+	#top-image {
+		position: absolute;
+		width: 110px;
+		left: 232px;
+		top: 10px;
+	}
+
+	#bottom-image1 {
+		position: absolute;
+		width: 85px;
+		left: -35px;
+		top: 40px;
+	}
+
+	#bottom-image2 {
+		position: absolute;
+		width: 85px;
+		left: -35px;
+		top: 255px;
+	}
+
+	#container {
+		width: 300px;
+		height: 620px;
+	}
+
+	#bottom-text {
+		margin-left: 0px;
+	}
+
+	h1 {
+		margin-left: 0;
+		font-size: 30px;
+	}
+
+	#top-text > p {
+		margin-left: 0;
+	}
+
+	p {
+		font-size: 18px;
+		 letter-spacing: -1px;
+	}
+
+	#submit-main {
+		margin-left: 0;
+	}
+
+	#submit {
+		font-size: 15px;
+		top: 20px;
+	}
+
+	#bottom-text-div > p {
+		padding-left: 55px;
+	}
+
+	#bottom-text {
+		margin-left: 0;
+	}
+
+}
+
+@media screen and (max-width: 436px) {
+	#container {
+		width: 200px;
+		height: 810px;
+	}
+
+	#top-image {
+		width: 90px;
+		left: 182px;
+		top: 0px;
+	}
+
+	#bottom-image1 {
+		position: absolute;
+		width: 85px;
+		left: -35px;
+		top: 80px;
+	}
+
+	#bottom-image2 {
+		position: absolute;
+		width: 85px;
+		left: -35px;
+		top: 395px;
+	}
+
+	p {
+		letter-spacing: -1px;
+	}
+	
+	#top-text > p > span{
+		letter-spacing: -1.7px;
+	}
+
+}
